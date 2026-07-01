@@ -11,12 +11,6 @@ mcp = FastMCP("openapi-mcp")
 
 
 @mcp.tool()
-async def list_services() -> str:
-    """Devuelve la lista de microservicios disponibles."""
-    return await tools.list_services()
-
-
-@mcp.tool()
 async def list_endpoints(service: str) -> str:
     """Devuelve todos los endpoints de un servicio.
 
